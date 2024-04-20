@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+@startuml
+start
+:NumberFibonacci.iterativeNumberSearch(int n);
+if (n <= 1) then (true)
+  :Return n;
+  stop
+else (false)
+  :Initialize leftNumber = 0, rightNumber = 1;
+  :for i = 2 to n;
+  :helpNumber = leftNumber + rightNumber;
+  :leftNumber = rightNumber;
+  :rightNumber = helpNumber;
+  :End of loop;
+  :Return rightNumber;
+  stop
+endif
+@enduml
+
+
+@enduml

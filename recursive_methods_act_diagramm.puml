@@ -1,0 +1,15 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:NumberFibonacci.recursiveNumberSearch(int n);
+
+if (n <= 1) then (false)
+:recursiveNumberSearch(n-1);
+:recursiveNumberSearch(n+1);
+:Return: recursiveNumberSearch(n-1)+recursiveNumberSearch(n+1);
+stop
+else (true)
+:Return:n;
+stop
+@enduml

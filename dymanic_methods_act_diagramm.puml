@@ -1,0 +1,26 @@
+@startuml
+'https://plantuml.com/activity-diagram-beta
+
+start
+:NumberFibonacci.dynamicNumberSearch(int n);
+if (n <= 1) then (true)
+  :Return n;
+  stop
+else (false)
+  if(memo.containsKey(n)) then(true)
+    :Return memo.get(n);
+    stop
+  else(false)
+    :dynamicNumberSearch(n-1);
+    :dynamicNumberSearch(n-2);
+    :fib = dynamicNumberSearch(n-1)+dynamicNumberSearch(n-2);
+    :memo.put(n, fib);
+    :Return fib;
+    stop
+  endif
+endif
+@enduml
+
+
+@enduml
+
